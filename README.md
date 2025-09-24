@@ -1,6 +1,6 @@
 # Shai-Hulud Supply Chain Attack Detection Tool
 
-🔍 A CLI tool for detecting the "Shai-Hulud" npm supply chain attack that occurred in September 2024.
+🔍 A CLI tool for detecting the "Shai-Hulud" npm supply chain attack that occurred in September 2025.
 
 ## Features
 
