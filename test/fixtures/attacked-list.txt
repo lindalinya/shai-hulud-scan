@@ -1,0 +1,3 @@
+@ahmedhfarag/ngx-perfect-scrollbar@20.0.20
+@art-ws/common@2.0.28
+lodash@4.17.21

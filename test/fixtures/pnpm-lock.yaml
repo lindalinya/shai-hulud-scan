@@ -1,0 +1,22 @@
+lockfileVersion: '6.0'
+
+packages:
+  /@ahmedhfarag/ngx-perfect-scrollbar@20.0.20:
+    version: 20.0.20
+    resolution: '@ahmedhfarag/ngx-perfect-scrollbar@20.0.20'
+    integrity: sha512-test
+
+  /@art-ws/common@2.0.28:
+    version: 2.0.28
+    resolution: '@art-ws/common@2.0.28'
+    integrity: sha512-test
+
+  /lodash@4.17.21:
+    version: 4.17.21
+    resolution: 'lodash@4.17.21'
+    integrity: sha512-test
+
+  /safe-package@1.0.0:
+    version: 1.0.0
+    resolution: 'safe-package@1.0.0'
+    integrity: sha512-test

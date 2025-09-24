@@ -1,0 +1,55 @@
+{
+  "name": "shai-hulud-scan",
+  "version": "1.0.0",
+  "description": "A CLI tool for detecting the 'Shai-Hulud' npm supply chain attack that occurred in September 2024",
+  "main": "index.js",
+  "bin": {
+    "shai-hulud-scan": "./bin/shai-hulud-scan.js"
+  },
+  "scripts": {
+    "test": "jest --silent",
+    "test:watch": "jest --watch --silent",
+    "test:coverage": "jest --coverage --silent",
+    "test:verbose": "jest --verbose"
+  },
+  "keywords": [
+    "security",
+    "npm",
+    "supply-chain",
+    "shai-hulud",
+    "vulnerability",
+    "scan"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "lib/**/*.js",
+      "bin/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": ["text", "lcov", "html"]
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "data/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/shai-hulud-scan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/shai-hulud-scan/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/shai-hulud-scan#readme"
+}
