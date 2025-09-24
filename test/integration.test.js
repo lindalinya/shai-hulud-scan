@@ -201,7 +201,8 @@ packages:
           ],
           'lodash@4.17.21': ['/project/yarn.lock']
         },
-        total: 3
+        total: 3,
+        lockFiles: ['/project/package-lock.json', '/project/yarn.lock', '/project/src/package-lock.json']
       };
       
       const textOutput = scanner.formatOutput(scanResults, { json: false });
@@ -219,7 +220,8 @@ packages:
           '@ahmedhfarag/ngx-perfect-scrollbar@20.0.20': ['/project/package-lock.json'],
           'lodash@4.17.21': ['/project/yarn.lock']
         },
-        total: 2
+        total: 2,
+        lockFiles: ['/project/package-lock.json', '/project/yarn.lock']
       };
       
       const jsonOutput = scanner.formatOutput(scanResults, { json: true });

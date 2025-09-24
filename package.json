@@ -1,6 +1,6 @@
 {
   "name": "shai-hulud-scan",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A CLI tool for detecting the 'Shai-Hulud' npm supply chain attack that occurred in September 2024",
   "main": "index.js",
   "bin": {
@@ -23,7 +23,10 @@
   "author": "Lindalin",
   "license": "MIT",
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.22.0",
+    "pnpm": ">=6.0.0"
   },
   "devDependencies": {
     "jest": "^29.0.0",

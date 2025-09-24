@@ -364,7 +364,7 @@ packages:
     });
 
     test('should handle formatOutput with empty results', () => {
-      const scanResults = { results: {}, total: 0 };
+      const scanResults = { results: {}, total: 0, lockFiles: [] };
       const options = { json: false };
       
       const result = scanner.formatOutput(scanResults, options);
@@ -377,7 +377,8 @@ packages:
         results: {
           'package@1.0.0': ['/path/to/lock1', '/path/to/lock2']
         },
-        total: 2
+        total: 2,
+        lockFiles: ['/path/to/lock1', '/path/to/lock2']
       };
       const options = { json: true };
       
