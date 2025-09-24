@@ -313,7 +313,7 @@ packages:
       
       const result = scanner.scan('/empty/directory');
       
-      expect(result).toEqual({ results: {}, total: 0 });
+      expect(result).toEqual({ results: {}, total: 0, lockFiles: [] });
     });
 
     test('should handle scan with mixed lockfile types', () => {

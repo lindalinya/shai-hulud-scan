@@ -260,5 +260,58 @@ describe('ShaiHuludScanner', () => {
 
       expect(result).toBe('✅ No packages affected by Shai-Hulud attack found');
     });
+
+    test('should format listFiles output correctly', () => {
+      const scanResults = {
+        results: {},
+        total: 0,
+        lockFiles: [
+          '/path/to/package-lock.json',
+          '/path/to/yarn.lock',
+          '/path/to/pnpm-lock.yaml'
+        ]
+      };
+      const options = { listFiles: true, json: false };
+
+      const result = scanner.formatOutput(scanResults, options);
+
+      expect(result).toContain('Found 3 lock file(s)');
+      expect(result).toContain('📄 /path/to/package-lock.json (npm)');
+      expect(result).toContain('📄 /path/to/yarn.lock (yarn)');
+      expect(result).toContain('📄 /path/to/pnpm-lock.yaml (pnpm)');
+    });
+
+    test('should format listFiles JSON output correctly', () => {
+      const scanResults = {
+        results: {},
+        total: 0,
+        lockFiles: [
+          '/path/to/package-lock.json',
+          '/path/to/yarn.lock'
+        ]
+      };
+      const options = { listFiles: true, json: true };
+
+      const result = scanner.formatOutput(scanResults, options);
+      const parsed = JSON.parse(result);
+
+      expect(parsed).toEqual([
+        '/path/to/package-lock.json',
+        '/path/to/yarn.lock'
+      ]);
+    });
+
+    test('should show no files message when no lock files found', () => {
+      const scanResults = {
+        results: {},
+        total: 0,
+        lockFiles: []
+      };
+      const options = { listFiles: true, json: false };
+
+      const result = scanner.formatOutput(scanResults, options);
+
+      expect(result).toBe('No lock files found in the specified directory');
+    });
   });
 });

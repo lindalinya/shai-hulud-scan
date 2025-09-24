@@ -44,6 +44,12 @@ shai-hulud-scan /path/to/project
 # JSON format output
 shai-hulud-scan --json
 
+# List all scanned lock files
+shai-hulud-scan --list-files
+
+# List files in JSON format
+shai-hulud-scan --list-files --json
+
 # Specify directory and output JSON
 shai-hulud-scan --dir ./src --json
 
@@ -74,6 +80,24 @@ shai-hulud-scan --version
     "severity": "high",
     "type": "shai-hulud-compromise"
   }
+]
+```
+
+### List files output
+```
+Found 3 lock file(s):
+
+📄 /path/to/package-lock.json (npm)
+📄 /path/to/yarn.lock (yarn)
+📄 /path/to/pnpm-lock.yaml (pnpm)
+```
+
+### List files JSON output
+```json
+[
+  "/path/to/package-lock.json",
+  "/path/to/yarn.lock",
+  "/path/to/pnpm-lock.yaml"
 ]
 ```
 

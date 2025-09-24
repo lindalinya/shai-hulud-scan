@@ -9,6 +9,7 @@ function parseArgs() {
     json: false,
     help: false,
     version: false,
+    listFiles: false,
     directory: process.cwd()
   };
 
@@ -18,6 +19,10 @@ function parseArgs() {
     switch (arg) {
       case "--json":
         options.json = true;
+        break;
+      case "--list-files":
+      case "-l":
+        options.listFiles = true;
         break;
       case "--help":
       case "-h":
@@ -54,6 +59,7 @@ Usage:
 
 Options:
   --json, -j          Output results in JSON format
+  --list-files, -l    List all scanned lock files
   --dir, -d <dir>     Specify directory to scan (default: current directory)
   --help, -h          Show help information
   --version, -v       Show version information
@@ -61,6 +67,7 @@ Options:
 Examples:
   shai-hulud-scan                    # Scan current directory
   shai-hulud-scan --json            # JSON format output
+  shai-hulud-scan --list-files       # List all scanned lock files
   shai-hulud-scan /path/to/project  # Scan specified directory
   shai-hulud-scan -d ./src --json   # Scan src directory and output JSON
 

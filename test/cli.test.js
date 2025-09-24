@@ -53,6 +53,7 @@ describe('CLI Interface', () => {
         json: false,
         help: false,
         version: false,
+        listFiles: false,
         directory: process.cwd()
       });
     });
@@ -121,6 +122,7 @@ describe('CLI Interface', () => {
         json: true,
         help: true,
         version: false,
+        listFiles: false,
         directory: '/path'
       });
     });
@@ -131,6 +133,20 @@ describe('CLI Interface', () => {
       
       expect(result.json).toBe(true);
       expect(result.help).toBe(false);
+    });
+
+    test('should parse --list-files flag', () => {
+      process.argv = ['node', 'script.js', '--list-files'];
+      const result = parseArgs();
+      
+      expect(result.listFiles).toBe(true);
+    });
+
+    test('should parse -l flag', () => {
+      process.argv = ['node', 'script.js', '-l'];
+      const result = parseArgs();
+      
+      expect(result.listFiles).toBe(true);
     });
   });
 
@@ -211,12 +227,14 @@ describe('CLI Interface', () => {
         json: false,
         help: false,
         version: false,
+        listFiles: false,
         directory: '/valid/path'
       });
       expect(mockScanner.formatOutput).toHaveBeenCalledWith(mockResults, {
         json: false,
         help: false,
         version: false,
+        listFiles: false,
         directory: '/valid/path'
       });
       expect(console.log).toHaveBeenCalledWith(mockOutput);
@@ -270,12 +288,14 @@ describe('CLI Interface', () => {
         json: true,
         help: false,
         version: false,
+        listFiles: false,
         directory: '/custom/path'
       });
       expect(mockScanner.formatOutput).toHaveBeenCalledWith(mockResults, {
         json: true,
         help: false,
         version: false,
+        listFiles: false,
         directory: '/custom/path'
       });
     });

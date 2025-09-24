@@ -20,7 +20,7 @@
     "vulnerability",
     "scan"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Lindalin",
   "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
@@ -46,10 +46,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/shai-hulud-scan.git"
+    "url": "git+https://github.com/lindalinya/shai-hulud-scan.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/shai-hulud-scan/issues"
+    "url": "https://github.com/lindalinya/shai-hulud-scan/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/shai-hulud-scan#readme"
+  "homepage": "https://github.com/lindalinya/shai-hulud-scan#readme"
 }
